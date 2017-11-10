@@ -1,0 +1,10 @@
+server:
+  port: 8761  #\u5F53\u524DEureka Server\u670D\u52A1\u7684\u7AEF\u53E3\u4E3A8761
+eureka:
+  instance:
+    hostname: localhost  #\u5F53\u524DEureka Server\u7684hostname\u4E3Alocalhost
+  client:
+    register-with-eureka: false  #\u5F53\u524D\u670D\u52A1\u4E0D\u9700\u8981\u5230Eureka Server\u4E0A\u6CE8\u518C
+    fetch-registry: false  #\u662F\u5426\u9700\u8981\u4ECEEureka Server\u83B7\u53D6\u6CE8\u518C\u6D88\u606F
+
+
