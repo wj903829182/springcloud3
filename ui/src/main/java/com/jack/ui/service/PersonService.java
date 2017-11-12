@@ -13,9 +13,9 @@ import java.util.List;
 /**
  * create by jack 2017/11/11
  */
-@FeignClient("person")
+@FeignClient(name = "person")
 public interface PersonService {
-    @RequestMapping(value = "save",method = RequestMethod.POST,
+    @RequestMapping(value = "/save",method = RequestMethod.POST,
     produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     List<Person> save(@RequestBody String name);

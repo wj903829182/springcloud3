@@ -27,7 +27,12 @@ public class PersonHystrixService {
         return personService.save(name);
     }
 
-    public List<Person> fallbackSave(){
+    /**
+     * 下面的fallbackSave方法需要参数，参数的个数和类型需要和save方法一样
+     * @param name
+     * @return
+     */
+    public List<Person> fallbackSave(String name){
         List<Person> list = new ArrayList<>();
         Person p = new Person("Person Service故障");
         list.add(p);

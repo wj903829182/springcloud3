@@ -7,14 +7,13 @@ import javax.persistence.*;
  */
 //@Entity注解指明这是一个和数据库表映射的实体类
 @Entity
-
 public class Person {
     /**
      * 主键id
      * @Id注解指明这个属性映射为数据库的主键
      * @GeneratedValue定义主键生成的方式，下面采用的是mysql的自增属性
      */
-    @Id
+    @Id//主键
     //@GeneratedValue(strategy= GenerationType.AUTO)使用内存数据库需要注释掉
     private Integer id;
     /**
