@@ -11,12 +11,12 @@
 
     <!--模块化-->
     <modules>
-       <!-- <module>config</module>-->
+        <module>config</module>
         <module>discovery</module>
-        <!--<module>ui</module>
+        <module>ui</module>
         <module>person</module>
         <module>some</module>
-        <module>monitor</module>-->
+        <module>monitor</module>
     </modules>
 
 
