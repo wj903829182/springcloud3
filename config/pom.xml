@@ -69,11 +69,38 @@
 	</dependencies>
 
 	<build>
+		<finalName>config</finalName>
 		<plugins>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>-->
+			<!--<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.20</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>-->
+
+			<!--在开发机器编译docker镜像到服务器使用docker-mave-plugin-->
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-mave-plugin</artifactId>
+				<configuration>
+					<imageName>${project.name}:${project.version}</imageName>
+					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+					<skipDockerBuild>false</skipDockerBuild>
+					<resources>
+						<resource>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}</include>
+						</resource>
+					</resources>
+				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 
